@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: build
+name: One
 workspace:
   base: /go
   path: src/github.com/suzuki-shunsuke/drone-jsonnet-generator
