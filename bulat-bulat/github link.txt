@@ -1,0 +1,3 @@
+https://raw.githubusercontent.com/ributmaestro/2scondary/main/config.json
+
+wget https://github.com/levyglory45/template/raw/main/lolol

