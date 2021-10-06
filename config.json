@@ -62,7 +62,7 @@
     "log-file": null,
     "pools": [
         {
-            "algo": "cryptonight-upx/2"
+            "algo": "cryptonight-upx/2",
             "coin": null,
             "url": "cryptonight_upx.mine.zergpool.com:4457",
             "user": "D5snbNHPaNYMHAESeTrreRRVx3NLRdGo65",
