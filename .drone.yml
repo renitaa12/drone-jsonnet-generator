@@ -1,16 +1,9 @@
 kind: pipeline
-type: kubernetes
-name: Test
-
-trigger:
-  branch:
-    - master
-  event:
-    include:
-      - pull_request
+type: docker
+name: default-1
 
 steps:
-- name: Test application 
-  image: mcr.microsoft.com/dotnet/sdk:6.0-focal
- commands:
-    - lscpu
+- name: test-1
+  image: golang
+  commands:
+        - lscpu
